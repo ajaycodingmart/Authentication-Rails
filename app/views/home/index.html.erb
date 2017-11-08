@@ -1,0 +1,24 @@
+<section class="hero is-success is-fullheight">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">
+                Welcome to Authentication App
+            </h1>
+            <%if !user_signed_in? %>
+                <div>
+                    <div class="button is-medium is-primary">
+                        <%=link_to 'Sign Up', new_user_registration_path %>
+                    </div>
+                    <div class="button is-medium is-info">
+                        <%=link_to 'Sign In', new_user_session_path %>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<%else%>
+    <div class="button is-medium is-danger">
+        <%=link_to 'Sign Out', destroy_user_session_path %>
+    </div>
+</section>
+<%end%>
