@@ -17,6 +17,8 @@
     </div>
 </section>
 <%else%>
+<h2>If I am not wrong, your name is <b><%=@user_mail%></b></h2>
+</br>
     <div class="button is-medium is-danger">
         <%=link_to 'Sign Out', destroy_user_session_path %>
     </div>
