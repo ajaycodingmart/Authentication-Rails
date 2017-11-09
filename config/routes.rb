@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
-  resources :user
+  # resources :user
   root 'home#index'
   devise_scope :user do
   	root to: "user#new"

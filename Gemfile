@@ -60,3 +60,4 @@ gem 'pry'
 gem 'rails_admin', '~> 1.2'
 gem 'omniauth', '~> 1.0'
 gem "bulma-rails", "~> 0.6.1"
+gem 'devise_invitable', '~> 1.7.0'

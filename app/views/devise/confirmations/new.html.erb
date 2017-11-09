@@ -1,16 +1,28 @@
-<h2>Resend confirmation instructions</h2>
+<section class="hero is-primary is-fullheight">
+	<div class="sign-title">
+        <div class="container">
+            <h1 class="title">
+				Resend confirmation instructions
+			</h1>
+        </div>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+<div class="tile is-parent is-4 sign-margin-auto">
+    <div class="tile is-child notification is-info">
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), :class => 'input' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend confirmation instructions", :class => 'button is-danger'  %>
   </div>
 <% end %>
+  </div>
+</div>
 
 <%= render "devise/shared/links" %>
+	</div>
+</section>
